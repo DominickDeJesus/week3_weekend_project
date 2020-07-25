@@ -1,9 +1,9 @@
 *{
     box-sizing: border-box;
-    font-family: "Arial Black", Gadget, sans-serif
+    font-family: 'Lato', sans-serif;
   }
   body{
-    background-color: lightgoldenrodyellow;
+    background-color: #1f2833;
   }
   #main{
     display: grid;
@@ -14,18 +14,23 @@
   #heading{
     display: grid;
     place-items: center;
-    background-color: aliceblue;
+    background-color: #1f2833;
     border-radius: 10px;
     padding: 30px;
   }
   h1, h3{
     margin: 0;
-    text-shadow: 3px 3px 3px lightgray;
+    color: #45A29E;
   }
+
+  h1{
+    font-size: 3.4rem;
+  }
+
   #chatbox{
     height: 400px;
     padding: 20px;
-    background-color: white;
+    background-color: #E0E0E0;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr;
@@ -34,26 +39,35 @@
   }
   .message{
     display: grid;
-    grid-template-columns: 1.4fr 65px 10fr 1fr;
+    grid-template-columns: 1fr 65px 10fr 1fr;
     grid-gap: 10px;
     padding: 5px;
     border-radius: 5px;
+    margin: 1px 0px;
   }
   .message:hover{
-    background-color: lightgray;
+    background-color: rgba(141, 228, 175, .3);
   }
   input{
     width: 100%;
     font-size: 1.5rem;
     padding: 5px;
+    background-color: #E0E0E0;
+    border-style: none;
+    border-radius: 5px;
   }
   button{
     font-size: 1.5rem;
     padding: 5px;
     cursor: pointer;
+    background-color: #0b0c10;
+    color: #E0E0E0;
+    border: 1px solid white;
+    border-radius: 5px;
   }
   .sender{
-    color: blue;
+    color: #45A29E;
+    font-weight: bold;
   }
   .delete{
     cursor: pointer;
