@@ -2,8 +2,8 @@ let id = 0;
 let formEl = document.querySelector('form');
 let chatboxEl = document.querySelector('#chatbox');
 let inputEl = document.querySelector('input');
-
-
+let buttonEl = document.querySelector('button');
+let apiURL = `https://api.icndb.com/jokes/random`;
 
 formEl.addEventListener("submit", (event) =>
 {   
@@ -13,10 +13,18 @@ formEl.addEventListener("submit", (event) =>
     event.target[0].value = '';
 });
 
+buttonEl.addEventListener('click', event => {
+    fetch(apiURL).then(response => {return response.json()}
+    ).then(function addJoke(data){
+        event.preventDefault();
+        chatboxEl.innerHTML = chatboxEl.innerHTML + getMessageCont(data.value.joke);
+    }
+    )
+})
+
 function delEl(elId){
     document.getElementById(`${elId}`).remove();
 }
-
 
 function getMessageCont(msg){
     id++;
@@ -32,6 +40,7 @@ function getTime(){
   };
   return new Date().toLocaleTimeString('en-US', options);
 }
+
 function getPronoun(){
    let pronouns = ['Me', 'Myself', 'I'];
    return pronouns[Math.round((Math.random()*2))];
