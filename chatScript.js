@@ -1,26 +1,26 @@
-console.log("Yo what up my boy?");
-console.log("feeling good fam!");
-
-
 let id = 0;
 let formEl = document.querySelector('form');
 let chatboxEl = document.querySelector('#chatbox');
 let inputEl = document.querySelector('input');
 
-//console.log(chatboxEl.innerText);
+
 
 formEl.addEventListener("submit", (event) =>
 {   
     event.preventDefault();
     let msg = event.target[0].value;
-    let messageEl = document.createElement('div');
     chatboxEl.innerHTML = chatboxEl.innerHTML + getMessageCont(msg);
     event.target[0].value = '';
 });
 
+function delEl(elId){
+    document.getElementById(`${elId}`).remove();
+}
+
 
 function getMessageCont(msg){
-  return `<div class='message'><span>${getTime()}</span><span class='sender'>${getPronoun()}:</span><span>${msg}</span><span class='delete'>❌</span>`
+    id++;
+  return `<div class='message' id='${id}'><span>${getTime()}</span><span class='sender'>${getPronoun()}:</span><span>${msg}</span><span class='delete' onclick='delEl(${id})'>❌</span>`
   }
  
 function getTime(){
