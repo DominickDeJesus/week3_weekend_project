@@ -1,5 +1,5 @@
 ## The Loneliest Chatroom
-This project was done as a weekend challenge on week 3 of wyncode academy. 
+This project was done as a weekend challenge for week 3 of wyncode academy. 
 
 ## Feature Requirements
 
