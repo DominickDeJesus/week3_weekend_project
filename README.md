@@ -1,6 +1,7 @@
 ## The Loneliest Chatroom
+This project was done as a weekend challenge on week 3 of wyncode academy. 
 
-## Features
+## Feature Requirements
 
 Try to implement as many as possible of the following.  As always, done is better than perfect and half a loaf is better than none.
 
@@ -16,10 +17,3 @@ Try to implement as many as possible of the following.  As always, done is bette
 
 * Feel free to implement with jQuery, vanilla JavaScript, or React
 * This afternoon's solution will be presented using only vanilla JS
-
-## Submissions
-
-* Clone this repo
-* Create and assign yourself an issue
-* Submit your work in the form of a pull request that closes the issue
-* Your branch should have the naming convention `feature-issue-number-your-name`
